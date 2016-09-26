@@ -32,3 +32,14 @@
 .footer{
 	text-align: center;
 }
+
+.drag-n-drop {
+  height: 100%;
+}
+.drag-n-drop {
+  display: flex;
+}
+
+.left, .right {
+  flex: 1;
+}

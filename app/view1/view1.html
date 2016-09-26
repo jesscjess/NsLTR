@@ -1,19 +1,28 @@
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-6">
+<div class="container-fluid drag-n-drop">
+	<div class="row" >
+		<div class="col-md-6 left" >
 			<div class="jumbotron components">
 				<h2>Choose your components</h2>
-				<div class="list-group" ng-repeat="n in [42, 42, 43, 43] track by $index">
-					<div class="list-group-item">
-						<p class="list-group-item-text">{{n}} Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+				<div class="list-group sortable-row" as-sortable="sortableCloneOptions" data-ng-model="itemsList.items1">
+					<div ng-repeat="item in itemsList.items1" as-sortable-item="" class="as-sortable-item">
+						<div class="list-group-item">
+							<p class="list-group-item-text" as-sortable-item-handle="" class="as-sortable-item-handle">{{item}}</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-6 right">
 			<div class="jumbotron myNsLTR">
-			  <h2>My NsLTR</h2>
-			  <p>Drag components here to make your own</p>
+				<h2>My NsLTR</h2>
+			  	<p ng-if="itemList.items2 === []">Drag components here to make your own</p>
+				<div class="list-group sortable-row" as-sortable="sortableOptions" data-ng-model="itemsList.items2">
+					<div ng-repeat="item in itemsList.items2" as-sortable-item="" class="as-sortable-item">
+						<div class="list-group-item">
+							<p class="list-group-item-text" as-sortable-item-handle="" class="as-sortable-item-handle">{{item}}</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
