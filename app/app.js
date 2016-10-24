@@ -4,12 +4,16 @@
 angular.module('myApp', [
     'ngRoute',
     'ui.bootstrap',
+    'as.sortable',
     'myApp.view1',
     'myApp.view2',
-    'myApp.version'
+    'myApp.version',
+    'myApp.nsltrTemplate'
 ]).
-config(['$locationProvider', '$routeProvider',                  function($locationProvider, $routeProvider) {
-    $locationProvider.hashPrefix('!');
+config(['$locationProvider', '$routeProvider',                  
+    function($locationProvider, $routeProvider) {
+        $locationProvider.hashPrefix('!');
 
-    $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+        $routeProvider.otherwise({redirectTo: '/view1'});  
+    }
+]);
