@@ -16,7 +16,7 @@
 						<tr>
 							<td  id="bodyCell1">
 								<div class=" components">
-									<div class="list-group sortable-row" as-sortable="sortableCloneOptions" data-ng-model="itemsList.items1">
+									<div class="list-group sortable-row" as-sortable="sortableComponentOptions" data-ng-model="itemsList.items1">
 										<div class="template-item" ng-repeat="item in itemsList.items1" as-sortable-item>
 											<!--<div class="list-group-item">-->
 											<div>
@@ -38,13 +38,11 @@
 						<!--<tr>-->
 							<!--<td id="bodyCell2">-->
 								<div class=" myNsLTR">
-									<div class="list-group sortable-row " as-sortable="sortableOptions" data-ng-model="itemsList.items2">
+									<div class="list-group sortable-row " as-sortable="myNsLTROptions" data-ng-model="itemsList.items2">
 										<p class="dropzone" ng-show="itemsList.items2 == '' ">Drag components here to make your own</p>
-										<div class="" ng-repeat="item in itemsList.items2" as-sortable-item>
+										<div class="" ng-repeat="item in itemsList.items2 track by $index" as-sortable-item>
 											<!--<div class="list-group-item">-->
 											<div>
-												<!--<p class="list-group-item-text" as-sortable-item-handle>{{item}}</p>-->
-												<!--<span class="glyphicon glyphicon-align-justify" as-sortable-item-handle></span>-->
 												<div as-sortable-item-handle>
 													<div nsltr-template template-url="{{item}}"></div>
 												</div>

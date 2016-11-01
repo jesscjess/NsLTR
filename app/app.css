@@ -48,16 +48,12 @@
   margin-bottom: 0px;
 }
 
-/*.drag-n-drop-container{
-  display: flex;
-}*/
 
 .drag-n-drop{
   /*background-color: #E1E1E1;*/
   background-color: #FFFFFF;
   /*padding: 10px 10px;*/
   height: inherit;
-  /*flex: 1;  additionally, equal width */
 }
 
 .template-item{
@@ -67,6 +63,17 @@
 
 .myNsLTR{
   margin: 10px;
+}
+
+
+.as-sortable-placeholder {
+    border: 1px dashed darkgrey;
+    box-sizing: border-box;
+    background-color: #dbdbdb;
+}
+
+.as-sortable-drag {
+    opacity: .8;
 }
 
 /*.sortable-row{
